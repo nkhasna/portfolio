@@ -223,7 +223,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <br>
 <li>
 <b>Requirement</b>: Stakeholders from Germany needed a Hardware-in-Loop simulation environment in India to test powertrain software of an Electric Vehicle. It was the first of its kind in the department in India. <br><br>
-<b>Challenges</b>: <br><br>
+<b>Challenges</b>: Setting up the first simulation environments is quite difficult because there is limited information on system-level signal interactions. To begin the debugging, I used my domain knowledge from previous projects to guide the team in pinpointing the defects and collaborate with the network team to rectify the signals at the network level. <br><br>
 <b>Methodology:</b> I headed the setting up of environment for powertrain systems in India. The team consisted of 4 developers. Setting up the first simulation is quite challenging, as the system debugging sequence of signals from different modules requires domain knowledge.
 <ol>1. Integrated the base model and updated the models as per specifications</ol>
 <ol>2. In the begining, the system did not work. I debugged the digital system with domain knowledge and speification documents.</ol>   
@@ -234,8 +234,7 @@ Another key challenge was that at the beginning of the project, upon integration
 </li>
 <br>
 <li>
-<b>Requirement</b>: Often, component-level models run accurately. However, when they are interconnected to form a system, the slight inaccuracy from one component propagates through the entire system and makes it unstable. This takes months of effort to stabilise the initial variants of the system models. To reduce this effort, a model quality improvement activity was initiated. <br><br> 
-<b>Challenges</b>: <br><br>
+<b>Requirement</b>: Often, component-level models run accurately. However, when they are interconnected to form a system, the slight inaccuracy from one component propagates through the entire system and makes it unstable. This takes months of effort to stabilise the initial variants of the system models. To reduce this effort, a model quality improvement activity was initiated. <br><br>
 <b>Methodology:</b> The topic was assigned to me, and I headed the simulation model quality topic.
 <ol>1. I improved model validation tool, prepared a timeline.</ol>
 <ol>2. I tracked progress of the topic with a total of 8 model developers.</ol>
@@ -245,7 +244,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <br>
 <li>
 <b>Requirement</b>: Due to inaccurate modelling, the lambda sensor behaved inaccurately. This led to the generation of unwanted DTCs (Diagnostic Trouble Codes). This hindered the testing of control software. The issue was unsolvable for more than a year from the beginning of the project. <br><br>
-<b>Challenges</b>: <br><br>
+<b>Challenges</b>: Identifying defects in a closed-loop environment is quite challenging because errors in one subsystem, which are often not observable at the component level, propagate throughout the system, obscuring the original location of the defect signal. I analysed the recorded data, examined the timing of the errors, and identified the root cause. Then, I remodelled the subsystem using an AI-driven method, as the simplified real-time model for Hardware-in-Loop was insufficient to capture the system's transient nonlinearity.<br><br>
 <b>Methodology:</b> When I was handed over the project, I did a thorough analysis and identified the root cause in the turbocharger model. I then developed Neural Network based sensor models of turbochargers to eliminate critical errors from lambda sensors of simulation platforms and deployed them in Hardware-in-Loop simulators.
 <ol>1. I created the Neural Network model using Scikit-Learn. I developed 2 ARX NN models: one for idling condition and one for driving condition.</ol>
 <ol>2. I converted the Python based model to a Simulink based model for code generation to flash to the HiL (Hardware-in-Loop).</ol>
@@ -259,7 +258,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <ul>
 <li>
 <b>Requirement</b>: Stakeholders requested that we add additional features to the engine models to expand the test case portfolio in every V-Cycle. <br><br>
-<b>Challenges</b>: <br><br>
+<b>Challenges</b>: The key challenge was to approximate the behaviour of the environment signals. The actual models are quite complex and developed by dedicated teams. To replace these models with simpler ones, I used domain knowledge from my supervisor and information from software documentation. I parameterised the model with field data and thoroughly evaluated it against a validation dataset.<br><br>
 <b>Methodology:</b> I was responsible for modelling the Gasoline engine. I single-handedly improved models of M282 and M274 engine variants.
 <ol>1. I used different global optimisation algorithms like Simulated Annealing, PSO and Bat Algorithm to parameterise the simulation models.</ol>
 <ol>2. I simulation models were delivered in every V-Cycle to enable digital validation of automotive software.</ol>
