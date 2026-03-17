@@ -210,8 +210,9 @@ Another key challenge was that at the beginning of the project, upon integration
 <b>Title: Senior Engineer (Oct 2019 - March 2022)</b>
 <ul>
 <li>
-<b>Requirement</b>: Stakeholders needed an accurate sensor model to test the ECU software's emission-related functionalities during OBD (on-board diagnostics) tests. Testing of an aged sensor is very difficult with real cars. <br>
-<b>Methodology:</b> I developed Neural Network-based GPF (Gasoline Particulate Filter) models and Physics-based TWC (Three-way Catalytic Converter) models and deployed them to a HiL (Hardware-in-Loop) simulation environment. <br>
+<b>Requirement</b>: Stakeholders needed an accurate sensor model to test the ECU software's emission-related functionalities during OBD (on-board diagnostics) tests. Testing of an aged sensor is very difficult with real cars. <br><br>
+<b>Challenges</b>: <br><br>
+<b>Methodology:</b> I developed Neural Network-based GPF (Gasoline Particulate Filter) models and Physics-based TWC (Three-way Catalytic Converter) models and deployed them to a HiL (Hardware-in-Loop) simulation environment.
 <ol>1. I created the Feed-Forward Neural Network model of GPF using Scikit-Learn and trained it with field data. I identified the fetaures using domain knowledge.</ol>
 <ol>2. I converted the Python based model to a Simulink based model for code generation to flash to the HiL (Hardware-in-Loop).</ol>
 <ol>3. I developed Physics-based TWC model to simulate oxygen storage and aging. I parameterised the physics based model with Simulated Annealing and field data.</ol>
@@ -220,8 +221,9 @@ Another key challenge was that at the beginning of the project, upon integration
 </li>
 <br>
 <li>
-<b>Requirement</b>: Stakeholders from Germany needed a Hardware-in-Loop simulation environment in India to test powertrain software of an Electric Vehicle. It was the first of its kind in the department in India. <br>
-<b>Methodology:</b> I headed the setting up of environment for powertrain systems in India. The team consisted of 4 developers. Setting up the first simulation is quite challenging, as the system debugging sequence of signals from different modules requires domain knowledge. <br>
+<b>Requirement</b>: Stakeholders from Germany needed a Hardware-in-Loop simulation environment in India to test powertrain software of an Electric Vehicle. It was the first of its kind in the department in India. <br><br>
+<b>Challenges</b>: <br><br>
+<b>Methodology:</b> I headed the setting up of environment for powertrain systems in India. The team consisted of 4 developers. Setting up the first simulation is quite challenging, as the system debugging sequence of signals from different modules requires domain knowledge.
 <ol>1. Integrated the base model and updated the models as per specifications</ol>
 <ol>2. In the begining, the system did not work. I debugged the digital system with domain knowledge and speification documents.</ol>   
 <ol>3. I guided the team in debugging.</ol>
@@ -231,8 +233,9 @@ Another key challenge was that at the beginning of the project, upon integration
 </li>
 <br>
 <li>
-<b>Requirement</b>: Often, component-level models run accurately. However, when they are interconnected to form a system, the slight inaccuracy from one component propagates through the entire system and makes it unstable. This takes months of effort to stabilise the initial variants of the system models. To reduce this effort, a model quality improvement activity was initiated. <br> 
-<b>Methodology:</b> The topic was assigned to me, and I headed the simulation model quality topic. <br>
+<b>Requirement</b>: Often, component-level models run accurately. However, when they are interconnected to form a system, the slight inaccuracy from one component propagates through the entire system and makes it unstable. This takes months of effort to stabilise the initial variants of the system models. To reduce this effort, a model quality improvement activity was initiated. <br><br> 
+<b>Challenges</b>: <br><br>
+<b>Methodology:</b> The topic was assigned to me, and I headed the simulation model quality topic.
 <ol>1. I improved model validation tool, prepared a timeline.</ol>
 <ol>2. I tracked progress of the topic with a total of 8 model developers.</ol>
 <ol>3. I Introduced the concept of integrated system-level model quality improvement through MathWorks' Global Optimisation Toolbox and Parallel Computing Toolbox.</ol>
@@ -240,8 +243,9 @@ Another key challenge was that at the beginning of the project, upon integration
 </li>
 <br>
 <li>
-<b>Requirement</b>: Due to inaccurate modelling, the lambda sensor behaved inaccurately. This led to the generation of unwanted DTCs (Diagnostic Trouble Codes). This hindered the testing of control software. The issue was unsolvable for more than a year from the beginning of the project. <br>
-<b>Methodology:</b> When I was handed over the project, I did a thorough analysis and identified the root cause in the turbocharger model. I then developed Neural Network based sensor models of turbochargers to eliminate critical errors from lambda sensors of simulation platforms and deployed them in Hardware-in-Loop simulators. <br>
+<b>Requirement</b>: Due to inaccurate modelling, the lambda sensor behaved inaccurately. This led to the generation of unwanted DTCs (Diagnostic Trouble Codes). This hindered the testing of control software. The issue was unsolvable for more than a year from the beginning of the project. <br><br>
+<b>Challenges</b>: <br><br>
+<b>Methodology:</b> When I was handed over the project, I did a thorough analysis and identified the root cause in the turbocharger model. I then developed Neural Network based sensor models of turbochargers to eliminate critical errors from lambda sensors of simulation platforms and deployed them in Hardware-in-Loop simulators.
 <ol>1. I created the Neural Network model using Scikit-Learn. I developed 2 ARX NN models: one for idling condition and one for driving condition.</ol>
 <ol>2. I converted the Python based model to a Simulink based model for code generation to flash to the HiL (Hardware-in-Loop).</ol>
 <ol>3. The Neural Network based model was deployed to production and used by stakeholders. It was the first Neural Network model deployed in the HiL. Removing errors in the lambda sensor enabled many diagnostic tests.</ol>
@@ -252,8 +256,9 @@ Another key challenge was that at the beginning of the project, upon integration
 <b>Title: Engineer (Jul 2017 - Sep 2019)</b>
 <ul>
 <li>
-<b>Requirement</b>: Stakeholders requested that we add additional features to the engine models to expand the test case portfolio in every V-Cycle. <br>
-<b>Methodology:</b> I was responsible for modelling the Gasoline engine. I single-handedly improved models of M282 and M274 engine variants. <br>
+<b>Requirement</b>: Stakeholders requested that we add additional features to the engine models to expand the test case portfolio in every V-Cycle. <br><br>
+<b>Challenges</b>: <br><br>
+<b>Methodology:</b> I was responsible for modelling the Gasoline engine. I single-handedly improved models of M282 and M274 engine variants.
 <ol>1. I used different global optimisation algorithms like Simulated Annealing, PSO and Bat Algorithm to parameterise the simulation models.</ol>
 <ol>2. I simulation models were delivered in every V-Cycle to enable digital validation of automotive software.</ol>
 <ol>3. I worked on-site (Germany) for three months as a coordinator and commissioned Gasoline and Diesel powertrain simulation model variants.</ol>
@@ -263,7 +268,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <b>Title: PGET (Jul 2016 - Jun 2017)</b>
 <ul>
 <li>
-<b>Requirement</b>: A requirement came from stakeholders in Germany to develop a package of torque controllers to test the Electronic Stability Controller. It was the first of its kind in the team. <br>
+<b>Requirement</b>: A requirement came from stakeholders in Germany to develop a package of torque controllers to test the Electronic Stability Controller. It was the first of its kind in the team. <br><br>
 <b>Methodology:</b> The Proof-of-Concept (PoC) was assigned to me under the supervision of a lead. I developed the PoC of the Gasoline engine’s torque controller using MATLAB, Simulink, Stateflow, and generated C code.
 <ol>1. I developed the models from simulation and field data.</ol>
 <ol>2. The controller was delivered to the ESP HiL (Hardware-in-Loop) simulation engineers of another department.</ol>
