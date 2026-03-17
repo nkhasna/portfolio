@@ -211,7 +211,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <ul>
 <li>
 <b>Requirement</b>: Stakeholders needed an accurate sensor model to test the ECU software's emission-related functionalities during OBD (on-board diagnostics) tests. Testing of an aged sensor is very difficult with real cars. <br><br>
-<b>Challenges</b>: <br><br>
+<b>Challenges</b>: The development of an emission model is quite challenging because of its nonlinearity. I modelled the sensors with both AI and physics-driven approaches. For an AI-based model, I identified the features using domain knowledge, validated the behaviour of the model for every corner case and validated the model with a wide variety of datasets (city and highway drive cycles). For the physics-based model, parameterisation was very challenging. I used data from the regeneration region to parametrise the model with Global Optimisation Algorithms.<br><br>
 <b>Methodology:</b> I developed Neural Network-based GPF (Gasoline Particulate Filter) models and Physics-based TWC (Three-way Catalytic Converter) models and deployed them to a HiL (Hardware-in-Loop) simulation environment.
 <ol>1. I created the Feed-Forward Neural Network model of GPF using Scikit-Learn and trained it with field data. I identified the fetaures using domain knowledge.</ol>
 <ol>2. I converted the Python based model to a Simulink based model for code generation to flash to the HiL (Hardware-in-Loop).</ol>
