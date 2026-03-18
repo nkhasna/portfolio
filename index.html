@@ -210,8 +210,8 @@ Another key challenge was that at the beginning of the project, upon integration
 <b>Title: Senior Engineer (Oct 2019 - March 2022)</b>
 <ul>
 <li>
-<b>Requirement</b>: Stakeholders needed an accurate sensor model to test the ECU software's emission-related functionalities during OBD (on-board diagnostics) tests. Testing of an aged sensor is very difficult with real cars. <br><br>
-<b>Challenges</b>: The development of an emission model is quite challenging because of its nonlinearity. I modelled the sensors with both AI and physics-driven approaches. For an AI-based model, I identified the features using domain knowledge, validated the behaviour of the model for every corner case and validated the model with a wide variety of datasets (city and highway drive cycles). For the physics-based model, parameterisation was very challenging. I used data from the regeneration region to parametrise the model with Global Optimisation Algorithms.<br><br>
+<b>Requirement</b>: Stakeholders needed an accurate and real-time sensor model to test the ECU software's emission-related functionalities during OBD (on-board diagnostics) tests. Testing of an aged sensor is very difficult with real cars. <br><br>
+<b>Challenge</b>: The key challenge in the project is from the non-linearity of the emission subsystem of a Gasoline engine. Hence, I decided to model the sensors with both AI and physics-driven approaches - a hybrid strategy. For the Feed-forward Neural Network model of GPF (Gasoline Particulate Filter), I identified features using domain knowledge, validated the model's behaviour across all corner cases, tested it with a wide variety of datasets (city and highway drive cycles), and ensured no overfitting or underfitting was using multiple metrics. I decided to use a physics-based approach for TWC (Three-Way Catalytic Converter), as we did not have much data for the ageing simulation.<br><br>
 <b>Methodology:</b> I developed Neural Network-based GPF (Gasoline Particulate Filter) models and Physics-based TWC (Three-way Catalytic Converter) models and deployed them to a HiL (Hardware-in-Loop) simulation environment.
 <ol>1. I created the Feed-Forward Neural Network model of GPF using Scikit-Learn and trained it with field data. I identified the fetaures using domain knowledge.</ol>
 <ol>2. I converted the Python based model to a Simulink based model for code generation to flash to the HiL (Hardware-in-Loop).</ol>
@@ -223,7 +223,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <br>
 <li>
 <b>Requirement</b>: Stakeholders from Germany needed a Hardware-in-Loop simulation environment in India to test powertrain software of an Electric Vehicle. It was the first of its kind in the department in India. <br><br>
-<b>Challenges</b>: Setting up the first simulation environments is quite difficult because there is limited information on system-level signal interactions. To begin the debugging, I used my domain knowledge from previous projects to guide the team in pinpointing the defects and collaborate with the network team to rectify the signals at the network level. <br><br>
+<b>Challenge</b>: Setting up the first simulation environments is quite difficult because there is limited information on system-level signal interactions. To begin the debugging, I used my domain knowledge from previous projects to guide the team in pinpointing the defects and collaborate with the network team to rectify the signals at the network level. <br><br>
 <b>Methodology:</b> I headed the setting up of environment for powertrain systems in India. The team consisted of 4 developers. Setting up the first simulation is quite challenging, as the system debugging sequence of signals from different modules requires domain knowledge.
 <ol>1. Integrated the base model and updated the models as per specifications</ol>
 <ol>2. In the begining, the system did not work. I debugged the digital system with domain knowledge and speification documents.</ol>   
@@ -235,16 +235,17 @@ Another key challenge was that at the beginning of the project, upon integration
 <br>
 <li>
 <b>Requirement</b>: Often, component-level models run accurately. However, when they are interconnected to form a system, the slight inaccuracy from one component propagates through the entire system and makes it unstable. This takes months of effort to stabilise the initial variants of the system models. To reduce this effort, a model quality improvement activity was initiated. <br><br>
+<b>Challenge</b>: Even after improving the subsystems, some variants still deviated at the system level after integration. To solve this challenge, I proposed fine-tuning of the integrated system with Mathworks' Global Optimisation Toolbox and Parallel Computing Toolbox as a proof of concept.<br><br>
 <b>Methodology:</b> The topic was assigned to me, and I headed the simulation model quality topic.
 <ol>1. I improved model validation tool, prepared a timeline.</ol>
-<ol>2. I tracked progress of the topic with a total of 8 model developers.</ol>
+<ol>2. I tracked progress of the topic with a total of 8 model developers and reported it to the management in India and Germany.</ol>
 <ol>3. I Introduced the concept of integrated system-level model quality improvement through MathWorks' Global Optimisation Toolbox and Parallel Computing Toolbox.</ol>
 <ol>4. Model quality was improved by more than 10% on average.</ol>
 </li>
 <br>
 <li>
 <b>Requirement</b>: Due to inaccurate modelling, the lambda sensor behaved inaccurately. This led to the generation of unwanted DTCs (Diagnostic Trouble Codes). This hindered the testing of control software. The issue was unsolvable for more than a year from the beginning of the project. <br><br>
-<b>Challenges</b>: Identifying defects in a closed-loop environment is quite challenging because errors in one subsystem, which are often not observable at the component level, propagate throughout the system, obscuring the original location of the defect signal. I analysed the recorded data, examined the timing of the errors, and identified the root cause. Then, I remodelled the subsystem using an AI-driven method, as the simplified real-time model for Hardware-in-Loop was insufficient to capture the system's transient nonlinearity.<br><br>
+<b>Challenge</b>: Identifying defects in a closed-loop environment is quite challenging because errors in one subsystem, which are often not observable at the component level, propagate throughout the system, obscuring the original location of the defect signal. To identify the root cause, I analysed the recorded data and examined the timing of the errors. After identifying the root cause, I remodelled the subsystem using an AI-driven method, as the simplified real-time model for Hardware-in-Loop was insufficient to capture the system's transient nonlinearity.<br><br>
 <b>Methodology:</b> When I was handed over the project, I did a thorough analysis and identified the root cause in the turbocharger model. I then developed Neural Network based sensor models of turbochargers to eliminate critical errors from lambda sensors of simulation platforms and deployed them in Hardware-in-Loop simulators.
 <ol>1. I created the Neural Network model using Scikit-Learn. I developed 2 ARX NN models: one for idling condition and one for driving condition.</ol>
 <ol>2. I converted the Python based model to a Simulink based model for code generation to flash to the HiL (Hardware-in-Loop).</ol>
@@ -258,7 +259,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <ul>
 <li>
 <b>Requirement</b>: Stakeholders requested that we add additional features to the engine models to expand the test case portfolio in every V-Cycle. <br><br>
-<b>Challenges</b>: The key challenge was to approximate the behaviour of the environment signals. The actual models are quite complex and developed by dedicated teams. To replace these models with simpler ones, I used domain knowledge from my supervisor and information from software documentation. I parameterised the model with field data and thoroughly evaluated it against a validation dataset.<br><br>
+<b>Challenge</b>: The key challenge was to accurately model the sensors. To address the challenge, I co-created with the stakeholders to understand the requirements in detail and learn from their experience with similar sensors from other projects. By thoroughly understanding the control software, I modelled the sensors using the Model-Based Design approach.<br><br>
 <b>Methodology:</b> I was responsible for modelling the Gasoline engine. I single-handedly improved models of M282 and M274 engine variants.
 <ol>1. I used different global optimisation algorithms like Simulated Annealing, PSO and Bat Algorithm to parameterise the simulation models.</ol>
 <ol>2. I simulation models were delivered in every V-Cycle to enable digital validation of automotive software.</ol>
@@ -270,6 +271,7 @@ Another key challenge was that at the beginning of the project, upon integration
 <ul>
 <li>
 <b>Requirement</b>: A requirement came from stakeholders in Germany to develop a package of torque controllers to test the Electronic Stability Controller. It was the first of its kind in the team. <br><br>
+<b>Challenge</b>: The key challenge was to approximate the behaviour of the environment signals. The actual models are quite complex and developed by dedicated teams. To replace these models with simpler ones, I used domain knowledge from my supervisor and information from software documentation. I parameterised the model with field data and thoroughly evaluated it against a validation dataset.<br><br>
 <b>Methodology:</b> The Proof-of-Concept (PoC) was assigned to me under the supervision of a lead. I developed the PoC of the Gasoline engine’s torque controller using MATLAB, Simulink, Stateflow, and generated C code.
 <ol>1. I developed the models from simulation and field data.</ol>
 <ol>2. The controller was delivered to the ESP HiL (Hardware-in-Loop) simulation engineers of another department.</ol>
